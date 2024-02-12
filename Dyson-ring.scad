@@ -6,7 +6,7 @@ $fa=1;
 $fs=0.4;
 $fn=100;
 
-dia = 20;
+dia = 19;
 width = 0.7;
 height = 7.5;
 cap_conn = 0.4;
@@ -32,10 +32,10 @@ module main() {
 
 module cuts() {
      extension = 1.01;
-     cut_width = 0.2;
+     cut_width = 0.4;
      cut_height = height-1.5*cap_conn;
      translate([0,0,height-cut_height])
-          for(i = [0:10:360]) {
+          for(i = [0:360/12:360]) {
                rotate(i)
                     cube([cut_width,extension*dia/2,extension*cut_height]);
           }
